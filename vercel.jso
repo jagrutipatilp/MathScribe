@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "MathScribe.wsgi.application",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "MathScribe.wsgi.application"
+    }
+  ]
+}
