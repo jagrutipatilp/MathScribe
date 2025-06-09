@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Feed</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="640" height="480"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawFrame(frameData) {
+            if (!frameData) return;
+            const img = new Image();
+            img.onload = () => {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+            img.src = "data:image/jpeg;base64," + frameData;
+        }
+
+        setInterval(() => {
+            fetch('/get_frame/') // Correct URL
+            .then(response => response.json())
+            .then(data => {
+                drawFrame(data.frame);
+            });
+        }, 30); // Adjust frame rate
+    </script>
+</body>
+</html>
