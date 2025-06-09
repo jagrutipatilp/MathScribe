@@ -1,4 +1,4 @@
-
+protobuf>=4.25.0,<5.0.0
 Django>=3.2,<5.0
 gunicorn
 vercel-wsgi
@@ -17,7 +17,6 @@ cycler==0.12.1
 Django==5.1.6
 flatbuffers==25.2.10
 fonttools==4.56.0
-gunicorn
 google-ai-generativelanguage==0.6.15
 google-api-core==2.24.1
 google-api-python-client==2.161.0
@@ -28,9 +27,6 @@ googleapis-common-protos==1.67.0
 grpcio==1.70.0
 grpcio-status==1.70.0
 httplib2==0.22.0
-idna==3.10
-jax==0.5.0
-jaxlib==0.5.0
 kiwisolver==1.4.8
 matplotlib==3.10.0
 mediapipe==0.10.21
